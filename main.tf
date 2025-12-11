@@ -1,6 +1,6 @@
  resource "aws_instance" "ec2-instance1" {
-   ami = "ami-0005e0cfe09cc9050"
-   instance_type = "t2.micro"
+   ami = "ami-0ebf411a80b6b22cb"  # AMI for us-west-2
+   instance_type = "t3.micro"
 
    tags = {                                
      Name = "demo-server1"
@@ -9,9 +9,9 @@
 
 
 resource "aws_instance" "ec2-Instance2" {
-  provider      = aws.west
-  ami           = "ami-0a5ed7a812aeb495a"  # AMI for us-west-1
-  instance_type = "t2.micro"
+  provider      = aws.west-1
+  ami           = "ami-0623300d1b7caee89"  # AMI for us-west-1
+  instance_type = "t3.micro"
 
   tags = {                                
     Name = "demo-server2"
